@@ -66,10 +66,14 @@ class OrderedMap extends Array
 ###!
 ###
 class FactorialTree
+  sizes: {}
+
   constructor: (@nodes, index = 0) -> @tree = @build_tree nodes
 
   size_of_tree: (height) ->
-    if height <= 1
+    return @sizes[height] if height of @sizes
+
+    @sizes[height] = if height <= 1
       1
     else
       (1 + @size_of_tree (height - 1)) * height
