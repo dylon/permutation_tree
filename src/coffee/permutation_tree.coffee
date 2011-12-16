@@ -65,7 +65,7 @@ class OrderedMap extends Array
 
 ###!
 ###
-class FactorialTree
+class PermutationTree
   sizes: {}
 
   constructor: (@nodes, index = 0) -> @tree = @build_tree nodes
@@ -103,7 +103,7 @@ class FactorialTree
 
       @shuffle shuffled, index, offset, (level + 1)
 
-factorial_tree = new FactorialTree([1, 2, 3, 4, 5, 6, 7, 8, 9])
+factorial_tree = new PermutationTree([1, 2, 3, 4, 5, 6, 7, 8, 9])
 
 console.log '--------------------------------------------------------------------------------'
 console.log "|nodes| = #{factorial_tree.nodes.length}"
